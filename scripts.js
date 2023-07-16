@@ -54,13 +54,13 @@ function loaderAnimation() {
         height: "100%",
         duration: 1,
         top: 0,
-        delay: -.8,
+ 
         ease: Expo.easeInOut
     }).to("#green", {
         height: "0%",
         duration: 1,
         bottom: 0,
-        delay: -.2,
+
         ease: Expo.easeInOut,
         onComplete: function () {
             animationHomePage();
@@ -74,7 +74,6 @@ function animationHomePage() {
     tl.to("#nav", {
         y: 0,
         opacity: 1,
-        delay: 4,
         ease: Expo.easeInOut,
     }).to("#nav .logo", {
         y: 0,
@@ -82,8 +81,8 @@ function animationHomePage() {
         ease: Expo.easeInOut,
     }).to("#home .parent .child", {
         y: 0,
-        duration: 1.5,
-        stagger: .2,
+        duration: 1,
+        
         ease: Expo.easeInOut
     }).to("#home #About-Me", {
         opacity: 1,
@@ -166,7 +165,6 @@ function circleAnimationHomePage() {
 revealToSpan();
 valuesSetter();
 loaderAnimation();
-animationHomePage();
 circleAnimationHomePage();
 cardHoverEffect();
 
@@ -207,5 +205,10 @@ function onclickGithubLink() {
 }
 function onclickInstaLink() {
     var url = "https://instagram.com/kishore.kumar99?igshid=ZGUzMzM3NWJiOQ==";
+    window.open(url, "_blank");
+}
+
+function onclickTwitterLink() {
+    var url = "https://twitter.com/hashtagkishore";
     window.open(url, "_blank");
 }
